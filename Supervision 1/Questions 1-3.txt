@@ -1,0 +1,90 @@
+  ------------- Question 1 ---------
+	   
+   	In Functional Programming: 
+ 
+   	No need to explicitly specify what goes on in memory
+   References, loops, are discouraged. 
+   The aforementioned concepts are the main tools of imperative
+   programming. 
+ 
+   	Functional Languages are declarative in terms they don't 
+   detail How something must be done, leaving this work for
+   the compiler (for example tail-recursion optimisation is 
+   not explicitly specified as iteration, but the complier 
+   does it whenever it detects a specific recursive call)
+   	Imperative languages usually don't do this. All optimisation
+   done to the program without the coder's knowledge is done by the 
+   platform's operating system, not the compiler. 
+   	
+   	In a typical functional language:
+   		- A function always returns a non-void value, which depends solely
+   	on the arguments
+   		- A machine state cannot affect and cannot be affected by the 
+   	functions, e.g. no side effects. 
+   			
+   	In a typical Imperative Language
+   		- A function may return void.
+   		- Usually these functions only alter the machine state
+   		- Machine state can affect the output of all function in the program
+   		
+   	Additionally most functional languages enforce immutability of data. This 
+   means that instead of discarding or directly altering the data inside memory
+   new chunks are repeatedly allocated and given name, rather than declared. 
+   
+   	Some if not all imperative languages rely heavily on mutating data and machine
+   state. THis means that while programs could and should contain lots of immutable
+   data, there's nothing forcing the programmer to do so. 
+   
+   
+
+
+  
+   ------------- Question 2 ---------
+   
+ 
+   primitives: int a; char b; boolean c; 
+   references: char[] d;
+   ----------------------------------------------
+   		here d is a reference to an array of characters in the heap. 
+   classes:
+   
+   public class Question{
+   
+   	private String verbalFormulation;
+   
+   	public 	Question(String newVerbalFormulation){
+   		verbalFormulation= newVerbalFormulation;
+   }	
+   private void ask (){
+   	System.out.println(verbalFormulation + " ?");
+   }
+   	
+   }
+   ----------------------------------------------
+   	Here, the class Questions is an abstract definition of a concept
+   of a question. what typically is associated with an object of type 
+   question is described as a field. 
+   	What is associated with the behaviour of quyestions is described in
+   its methods. 
+   
+   Objects
+   Question meaningOfLife = new Question("Why are we here");
+   
+   ----------------------------------------------
+   	Here meaning of life is a reference to an object in the heap, that has 
+   fields and behaviour associated with the class it belongs to.
+   
+ 	e.g. meaningOfLife points to a chunk of memory that has a section 
+   devoted to printing the question, to it's verbal formulation and a
+   constructor. 
+   
+   
+
+  
+   ------------- Question 3 ---------
+   
+   See attached image(S) in Jar FIle Directory Supervision Work drawings. 
+   Nomenclature is self-explanatory. 
+   
+   
+   
