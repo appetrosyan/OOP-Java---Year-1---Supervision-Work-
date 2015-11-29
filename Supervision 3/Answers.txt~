@@ -488,3 +488,12 @@ public class MedievalBuilder{
 A common anti patterns that afflicts many novice programmers coming form languages such as C++ is the Blob. the above example contains two classes of both of which, perform tasks of relatively the same level (considering the second one is actually a container that encapsulates data. However most programmers tend to create one huge instance of of code that contains almost everything the project can do, and keeping clasees that perform minute tasks, and could hypothertically be merged with the main "Blob". 
 
 This is one of the main reasons why Java enforces strictly taht a project has to contain packages, packages can contain classes and each class HAS to be a separate file. C~ took this even further providing different extensions for classes with different purpose. e.g. classes that actually merely describe the interface of a program are called interfaces, as opposed to instantiable classes. 
+
+ANother ANti pattern is the Telescoping constructor patten that is counteracted by the builder class' presence. 
+
+In software engineering another famous design anti-pattern is the presence of "poltergeists" e.g. short lived classes that perform minute tasks such as opening and closing resources. THis causes lots of confustion as they are present and most classes are dependent on them, however in effect all tey do is occupy space on the heap. The most reliabel solution is redistribution of responsibilities between different clases. 
+
+
+------------------------Question 10 
+
+The followig project is a cyberPet game. The interface appears to be serial, in terms that it has several prompt-called functions. In reality these functions can very well be replaced by simply reading a parallel implementation gui interface (without actually having to prompt the user in any way). The current implementation is command-driven in terms that instead of asking the user to press a particular key this works like a sort of language parser that can understand commands (e.g. play 0 will display the play information with animal 0) it also allocates pets into a hashmap so that invoking (play petname will be identical (actually much faster because this will save time in looking up the key from the name array. 
